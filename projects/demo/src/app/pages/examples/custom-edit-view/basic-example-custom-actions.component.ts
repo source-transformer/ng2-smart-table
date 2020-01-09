@@ -48,7 +48,7 @@ export class BasicExampleCustomActionsComponent {
   data = [
     {
       id: 1,
-      name: 'Leanne Graham',
+      name: 'Leanne Graham4',
       username: 'Bret',
       email: 'Sincere@april.biz',
     },
@@ -79,6 +79,6 @@ export class BasicExampleCustomActionsComponent {
   ];
 
   onCustom(event) {
-    alert(`Custom event '${event.action}' fired on row №: ${event.data.id}`)
+    alert(`Custom event '${event.action}' fired on row №: ${event.data.id}`);
   }
 }

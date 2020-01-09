@@ -44,7 +44,7 @@ export class AdvancedExampleConfirmComponent {
   data = [
     {
       id: 1,
-      name: 'Leanne Graham',
+      name: 'Leanne Graham6',
       username: 'Bret',
       email: 'Sincere@april.biz',
       notShownField: true,

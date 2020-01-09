@@ -52,7 +52,7 @@ export class BasicExampleButtonViewComponent implements OnInit {
         renderComponent: ButtonViewComponent,
         onComponentInitFunction(instance) {
           instance.save.subscribe(row => {
-            alert(`${row.name} saved!`)
+            alert(`${row.name} saved!`);
           });
         }
       },
@@ -62,7 +62,7 @@ export class BasicExampleButtonViewComponent implements OnInit {
   data = [
     {
       id: 1,
-      name: 'Leanne Graham',
+      name: 'Leanne Graham3',
       username: 'Bret',
       email: 'Sincere@april.biz',
       button: 'Button #1',
