@@ -11,7 +11,7 @@ export class AdvancedExamplesTypesComponent {
   data = [
     {
       id: 1,
-      name: 'Leanne Graham',
+      name: 'Leanne Graham2',
       username: 'Bret',
       email: 'Sincere@april.biz',
       comments: 'Lorem ipsum dolor sit amet, ex dolorem officiis convenire usu.',

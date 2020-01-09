@@ -9,10 +9,20 @@ import { PagesModule } from './pages/pages.module';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { ScrollPositionDirective } from './theme/directives/scrollPosition.directive';
+import { NestedEditorComponent } from './shared/components/nested-editor/nested-editor.component';
+import { LinkEditorComponent } from './shared/components/link-editor/link-editor.component';
+import { RawEditorComponent } from './shared/components/raw-editor/raw-editor.component';
+import { NestedRenderComponent } from './shared/components/nested-editor/nested-render.component';
+import { NumericComponentDynamic } from './shared/components/numeric-editor/numeric-editor.component';
 @NgModule({
   declarations: [
     AppComponent,
     ScrollPositionDirective,
+    NestedEditorComponent,
+    LinkEditorComponent,
+    RawEditorComponent,
+    NestedRenderComponent,
+    NumericComponentDynamic
   ],
   imports: [
     BrowserModule,
@@ -23,6 +33,13 @@ import { ScrollPositionDirective } from './theme/directives/scrollPosition.direc
     PagesModule,
   ],
   providers: [],
+  entryComponents: [
+    NestedEditorComponent,
+    LinkEditorComponent,
+    RawEditorComponent,
+    NestedRenderComponent,
+    NumericComponentDynamic
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

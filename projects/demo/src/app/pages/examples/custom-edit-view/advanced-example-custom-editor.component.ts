@@ -15,7 +15,7 @@ export class AdvancedExamplesCustomEditorComponent {
   data = [
     {
       id: 1,
-      name: 'Leanne Graham',
+      name: 'Leanne Graham1',
       username: 'Bret',
       link: '<a href="http://www.google.com">Google</a>',
     },

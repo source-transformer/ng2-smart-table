@@ -29,7 +29,7 @@ export class BasicExampleMultiSelectComponent {
   data = [
     {
       id: 1,
-      name: 'Leanne Graham',
+      name: 'Leanne Graham7',
       username: 'Bret',
       email: 'Sincere@april.biz',
     },

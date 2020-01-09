@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+import { LinkEditorComponent } from '../link-editor/link-editor.component';
+import { NestedEditorComponent } from '../nested-editor/nested-editor.component';
+import { RawEditorComponent } from '../raw-editor/raw-editor.component';
+import { NestedRenderComponent } from '../nested-editor/nested-render.component';
+import { NumericComponentDynamic } from '../numeric-editor/numeric-editor.component';
+
 
 @Component({
   selector: 'basic-example-data',
@@ -9,9 +15,13 @@ import { Component } from '@angular/core';
 export class BasicExampleDataComponent {
 
   settings = {
+    attr: {
+      class: 'smarty-table',
+    },
     columns: {
       id: {
         title: 'ID',
+        editor: {type: 'custom', component: NumericComponentDynamic}
       },
       name: {
         title: 'Full Name',
@@ -22,15 +32,50 @@ export class BasicExampleDataComponent {
       email: {
         title: 'Email',
       },
+      raw: {
+        title: 'Raw',
+        editor: {
+          type: 'custom',
+          component: RawEditorComponent,
+        },
+      },
+      labels: {
+        title: 'Labels',
+        type: 'custom',
+        renderComponent: NestedRenderComponent,
+        editor: {
+          type: 'custom',
+          component: NestedEditorComponent,
+					columns: {
+						foo: {
+							title: 'foo'
+						},
+						bar: {
+							title: 'bar'
+            }
+          }
+        },
+      },
+      link: {
+        title: 'Link',
+        type: 'html',
+        editor: {
+          type: 'custom',
+          component: LinkEditorComponent,
+        },
+      },
     },
   };
 
   data = [
     {
       id: 1,
-      name: 'Leanne Graham',
+      name: 'Leanne Graham8',
       username: 'Bret',
       email: 'Sincere@april.biz',
+      raw: [42, 12],
+      labels: [{id: 'foo'}, {id: 'bar', title: 'bogus', animal: 'dog', address: '1234 Sunnyside Rd'}],
+      link: '<a href="https://github.com/akveo/blur-admin">Blur Admin</a>',
     },
     {
       id: 2,

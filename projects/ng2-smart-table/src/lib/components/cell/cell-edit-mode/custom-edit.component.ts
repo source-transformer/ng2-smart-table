@@ -37,6 +37,12 @@ export class CustomEditComponent extends EditCellDefault implements OnChanges, O
       this.customComponent.instance.onStopEditing.subscribe(() => this.onStopEditing());
       this.customComponent.instance.onEdited.subscribe((event: any) => this.onEdited(event));
       this.customComponent.instance.onClick.subscribe((event: any) => this.onClick(event));
+
+      //console.log('CustomEditComponent: ngOnChanges: this.cell.getColumn().editor:', this.cell.getColumn().editor);
+      //console.log('CustomEditComponent: ngOnChanges: this.cell.getColumn().editor.columns:', this.cell.getColumn().editor.columns);
+      if (this.cell.getColumn().editor.columns) {
+        this.customComponent.instance.columns = this.cell.getColumn().editor.columns;
+      }
     }
   }
 

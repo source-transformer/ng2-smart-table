@@ -12,7 +12,7 @@ export class Column {
   isFilterable: boolean = false;
   sortDirection: string = '';
   defaultSortDirection: string = '';
-  editor: { type: string, config: any, component: any } = { type: '', config: {}, component: null };
+  editor: { type: string, config: any, component: any, columns: Column[] } = { type: '', config: {}, component: null, columns: [] };
   filter: { type: string, config: any, component: any } = { type: '', config: {}, component: null };
   renderComponent: any = null;
   compareFunction: Function;
